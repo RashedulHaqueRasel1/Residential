@@ -43,7 +43,7 @@ const NavBar = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li><NavLink to={'/updateProfile'}>Update Profile</NavLink></li>
                             <li><NavLink to={'/profile'}>Profile</NavLink></li>
-                            <li><NavLink >Log Out</NavLink></li>
+                            <li><NavLink to={'/'}>Log Out</NavLink></li>
                             
                         </ul>
                     </div>

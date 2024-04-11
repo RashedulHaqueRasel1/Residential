@@ -16,6 +16,7 @@ import './styles.css';
 // import img5 from '../../assets/img5.jpg'
 // import img8 from '../../assets/img8.jpg'
 import img4 from '../../assets/img4.jpg'
+ 
 
  
 
@@ -43,6 +44,7 @@ const Hero = () => {
  
 
             </Swiper>
+ 
         </>
     );
 };

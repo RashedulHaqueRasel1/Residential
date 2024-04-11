@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Luxury Beachfront Villa",
+    "segment_name": "Residential",
+    "short_description": "A luxurious villa situated right on the beach with breathtaking ocean views.",
+    "description": "This stunning beachfront villa in Malibu offers an exquisite living experience with unparalleled ocean views. The spacious 5,000 sq ft property features an infinity pool, private beach access, and a large patio for entertaining guests. Inside, you'll find a modern kitchen, comfortable living room, and elegant bedrooms. The property is designed to provide the utmost privacy and tranquility, making it the perfect retreat for those seeking a luxurious coastal lifestyle.",
+    "price": "$ 3,500,000",
+    "status": "sale",
+    "area": "5,000 sq ft",
+    "location": "Malibu, California",
+    "facilities": [
+      "living room",
+      "modern kitchen",
+      "infinity pool",
+      "private beach access",
+      "spacious patio"
+    ],
+    "image": "https://i.ibb.co/3YFSQf0/img10.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Modern City Apartment",
+    "segment_name": "Residential",
+    "short_description": "A sleek and modern apartment with stunning skyline views in the heart of the city.",
+    "description": "Located in the bustling city center of New York City, this contemporary apartment offers stunning skyline views and luxurious living. The 1,500 sq ft unit features an open-concept living room and kitchen, a spacious bedroom, and a balcony for enjoying the cityscape. Residents can access a fitness center and concierge service, providing comfort and convenience in this urban oasis.",
+    "price": "$ 800,000",
+    "status": "rent",
+    "area": "1,500 sq ft",
+    "location": "New York City, New York",
+    "facilities": [
+      "living room",
+      "balcony",
+      "modern kitchen",
+      "fitness center",
+      "concierge service"
+    ],
+    "image": "https://i.ibb.co/jRvj3Mg/img6.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Cozy Suburban Home",
+    "segment_name": "Residential",
+    "short_description": "A charming suburban home with a spacious backyard, perfect for family gatherings.",
+    "description": "This cozy suburban home in Seattle offers a peaceful living experience with a spacious backyard, ideal for family gatherings and outdoor activities. The 2,500 sq ft property features a welcoming living room with a fireplace, a modern kitchen with updated appliances, and comfortable bedrooms. Enjoy the tranquil backyard garden for relaxation and gardening. The home's convenient location provides easy access to schools, parks, and shopping centers.",
+    "price": "$ 600,000",
+    "status": "sale",
+    "area": "2,500 sq ft",
+    "location": "Seattle, Washington",
+    "facilities": [
+      "living room",
+      "modern kitchen",
+      "fireplace",
+      "backyard garden"
+    ],
+    "image": "https://i.ibb.co/P42hjdy/img4.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Rustic Countryside Cottage",
+    "segment_name": "Residential",
+    "short_description": "A charming countryside cottage surrounded by lush greenery and rolling hills.",
+    "description": "Escape to the serene countryside with this rustic cottage in the picturesque Cotswolds, England. The 1,800 sq ft home boasts a cozy living room with a fireplace, a quaint kitchen, and comfortable bedrooms. Enjoy scenic views and the soothing sounds of nature from the garden. The cottage offers a peaceful retreat for those seeking a slower pace of life in a beautiful rural setting.",
+    "price": "$ 400,000",
+    "status": "sale",
+    "area": "1,800 sq ft",
+    "location": "Cotswolds, England",
+    "facilities": [
+      "living room",
+      "fireplace",
+      "quaint kitchen",
+      "garden",
+      "scenic views"
+    ],
+    "image": "https://i.ibb.co/nC4djY2/img7.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Ski Chalet",
+    "segment_name": "Residential",
+    "short_description": "A cozy chalet nestled in the mountains, perfect for ski enthusiasts.",
+    "description": "Nestled in the stunning mountains of Chamonix, France, this ski chalet offers a cozy retreat for winter sports enthusiasts. The 2,800 sq ft property features a comfortable living room with a fireplace, a well-equipped kitchen, and spacious bedrooms. Enjoy the hot tub and ski-in/ski-out access for an unforgettable mountain experience. The chalet also provides breathtaking views of the surrounding peaks, making it an idyllic escape for nature lovers.",
+    "price": "$ 1,200,000",
+    "status": "rent",
+    "area": "2,800 sq ft",
+    "location": "Chamonix, France",
+    "facilities": [
+      "living room",
+      "fireplace",
+      "well-equipped kitchen",
+      "hot tub",
+      "ski-in/ski-out access",
+      "mountain views"
+    ],
+    "image": "https://i.ibb.co/M5q8fry/img9.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Lakefront Retreat",
+    "segment_name": "Residential",
+    "short_description": "A tranquil retreat nestled by the lake, offering serene views and a peaceful ambiance.",
+    "description": "Experience tranquility at this lakefront retreat in Lake Tahoe, California. The 2,200 sq ft property features a spacious living room, a modern kitchen, and comfortable bedrooms. Enjoy private dock access, perfect for water activities, and relax on the deck overlooking the serene lake. This property provides a peaceful escape for those seeking a nature-filled getaway with beautiful lake views.",
+    "price": "$ 900,000",
+    "status": "sale",
+    "area": "2,200 sq ft",
+    "location": "Lake Tahoe, California",
+    "facilities": [
+      "living room",
+      "modern kitchen",
+      "private dock",
+      "deck",
+      "lake access"
+    ],
+    "image": "https://i.ibb.co/MZqtbgv/img12.jpg"
+  }
+]
