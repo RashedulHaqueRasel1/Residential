@@ -5,6 +5,7 @@
 import { IoIosPricetag } from "react-icons/io";
 import { FaComments } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 
 const Property = ({ property }) => {
@@ -69,19 +70,24 @@ const Property = ({ property }) => {
                         {/* facilities */}
 
 
-                            <div className="grid grid-cols-3">
+                        <div className="grid grid-cols-3">
                             {
-                                facilities.map( (tag) => <div  key={tag.id}>
+                                facilities.map((tag) => <div key={tag.id}>
                                     <p>#{tag}</p>
                                 </div>)
                             }
-                            </div>
+                        </div>
 
- 
+
 
 
                         <div>
-                            <button className="btn btn-secondary w-full">View Property</button>
+                            <Link
+                                to={`/propertyDetails/${id}`}
+                                className=" btn btn-secondary w-full font-bold"
+                            >
+                                View Property
+                            </Link>
                         </div>
                     </div>
                 </div>

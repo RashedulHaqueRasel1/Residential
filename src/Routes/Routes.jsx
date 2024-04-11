@@ -8,6 +8,7 @@ import Profile from "../components/Profaile/Profile";
 import Registration from "../components/Registration/Registration";
 import Login from "../components/Login/Login";
 import Home from "../components/Home/Home";
+import PropertyDetails from "../components/PropertyDetails/PropertyDetails";
  
 
 
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/propertyDetails/:id',
+                element:<PropertyDetails></PropertyDetails>,
+                loader: () => fetch('/property.json')
             }
         ]
     },

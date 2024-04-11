@@ -7,17 +7,17 @@ const Login = () => {
         <div>
 
 
-            <div className="w-full card shrink-0 mt-12 mb-12  max-w-sm shadow-2xl bg-base-100   p-8 space-y-3 rounded-xl container mx-auto">
+            <div className="w-full card shrink-0 mt-12 mb-12  max-w-sm shadow-2xl bg-base-100 border border-rose-600  p-8 space-y-3 rounded-xl container mx-auto">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
                 {/* <TextField id="outlined-basic" className="" label="Name" variant="outlined" /> */}
                 <form className="space-y-6">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="email" className="block d ">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Your Email" className="input input-bordered w-full    focus:dark:border-default-600" required />
+                        <input type="text" name="email" id="email" placeholder="Your Email" className="input input-bordered w-full    border-blue-300   focus:dark:border-blue-500" required />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="password" className="block  ">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password" className="input input-bordered w-full    focus:dark:border-default-600" required />
+                        <input type="password" name="password" id="password" placeholder="Password" className="input input-bordered w-full    border-blue-300   focus:dark:border-blue-500" required />
                         <div className="flex justify-end text-xs  ">
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                         </div>
