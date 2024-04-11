@@ -1,23 +1,83 @@
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useNavigate, useLocation } from "react-router-dom";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 
 
 const Login = () => {
+
+
+
+    const { user, userLogIn } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(user)
+
+    const handleLogin = e => {
+        e.preventDefault();
+        console.log(e.currentTarget)
+        const form = new FormData(e.currentTarget)
+        const email = form.get("email")
+        const password = form.get("password")
+        console.log(email, password)
+
+
+        // User Log in
+        userLogIn(email, password)
+            .then(result => {
+                console.log(result.user)
+
+                Swal.fire({
+                    title: "congratulations!",
+                    text: "You have Successfully Create an Account!",
+                    icon: "success"
+                });
+
+                // LogIn After navigate 
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+
+
     return (
         <div>
 
 
             <div className="w-full card shrink-0 mt-12 mb-12  max-w-sm shadow-2xl bg-base-100 border border-rose-600  p-8 space-y-3 rounded-xl container mx-auto">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
-                {/* <TextField id="outlined-basic" className="" label="Name" variant="outlined" /> */}
-                <form className="space-y-6">
+
+                <form className="space-y-6" onSubmit={handleLogin}>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="email" className="block d ">Email</label>
                         <input type="text" name="email" id="email" placeholder="Your Email" className="input input-bordered w-full    border-blue-300   focus:dark:border-blue-500" required />
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="password" className="block  ">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password" className="input input-bordered w-full    border-blue-300   focus:dark:border-blue-500" required />
+                        <label className="label flex items-center gap-2 input input-bordered border border-blue-300     ">
+                            <input
+
+                                type={showPassword ? "text" : "password"}
+                                placeholder="password"
+                                name="password"
+                                // className=""
+                                required
+
+                            />
+
+                            <span onClick={() => setShowPassword(!showPassword)} className="cursor-pointer ">
+                                {
+                                    showPassword ? <FaRegEye className="ml-16" /> : <FaRegEyeSlash className="ml-16" />
+                                }
+                            </span>
+                        </label>
                         <div className="flex justify-end text-xs  ">
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                         </div>

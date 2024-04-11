@@ -69,7 +69,7 @@ const PropertyDetails = () => {
 
 
                 {/* facilities */}
-                <div className="grid lg:grid-cols-5 ">
+                <div className="grid lg:grid-cols-5 w-2/5">
                     {
                         facilities.map((tag) => <div key={tag.id}>
                             <p>#{tag}</p>
