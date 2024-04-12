@@ -1,8 +1,16 @@
-# React + Vite
+# Residential Property Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application for residential properties such as single-family homes, townhouses, apartments, student housing, senior living communities, and vacation rentals.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse various types of residential properties.
+- Update user profiles.
+- Register and log in to the application.
+- View team members and contact information.
+
+## Technologies Used
+
+- [AOS](https://michalsnik.github.io/aos/): Animate on Scroll library for scrolling animations.
+- [Animate.css](https://animate.style/): Library of cross-browser animations.
+- [Swiper](https://swiperjs.com/): Modern touch slider with hardware accelerated transitions.
