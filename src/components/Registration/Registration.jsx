@@ -23,11 +23,12 @@ const Registration = () => {
         e.preventDefault();
         // console.log(e.currentTarget)
         const form = new FormData(e.currentTarget)
+        const name = form.get("name")
         const email = form.get("email")
         const password = form.get("password")
         const photo = form.get("photo")
         // console.log(email, password, photo, name)
-        // console.log(photo)
+        console.log(name, photo)
 
 
 
@@ -58,7 +59,7 @@ const Registration = () => {
 
 
         // Create User
-        createUser(email, password)
+        createUser(email, password, name)
             .then((result) => {
                 console.log(result.user)
                 Swal.fire({
@@ -82,29 +83,29 @@ const Registration = () => {
     return (
         <div>
 
-            <div className="hero mt-5 ">
+            <div className="hero mt-5 mb-9"  >
 
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Registration now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="py-6">Register now for exclusive access to premium residential properties. Whether you re looking for luxury homes, modern apartments, or cozy retreats, our portfolio offers a variety of options to suit your lifestyle. Secure your dream home today by signing up!</p>
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body" onSubmit={handleRegistration}>
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100" style={{ boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px' }}>
+                        <form className="card-body" onSubmit={handleRegistration} data-aos="fade-up" data-aos-duration="2000">
 
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" name="name" placeholder="Name" className="input input-bordered  border-blue-300   focus:dark:border-blue-500" required />
+                                <input type="text" name="name" placeholder="Name" className="input input-bordered  border-blue-300   focus:dark:border-blue-500" required data-aos="fade-up" data-aos-duration="2200"/>
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered  border-blue-300   focus:dark:border-blue-500" required />
+                                <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered  border-blue-300   focus:dark:border-blue-500" required data-aos="fade-up" data-aos-duration="2500"/>
                             </div>
 
 
@@ -112,12 +113,14 @@ const Registration = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered  border-blue-300   focus:dark:border-blue-500" required />
+                                <input type="email" name="email" placeholder="email" className="input input-bordered  border-blue-300   focus:dark:border-blue-500" required data-aos="fade-up" data-aos-duration="2700"/>
                             </div>
 
 
                             <div className="form-control">
-                                <label className="label flex items-center gap-2 input input-bordered border border-blue-300     ">
+                            <span className="label-text">Password</span>
+                                <label className="label flex items-center mt-2 gap-2 input input-bordered border border-blue-300     ">
+                                
                                     <input
 
                                         type={showPassword ? "text" : "password"}
@@ -125,6 +128,7 @@ const Registration = () => {
                                         name="password"
                                         // className=""
                                         required
+                                        data-aos="fade-up" data-aos-duration="2900"
 
                                     />
 
@@ -142,7 +146,7 @@ const Registration = () => {
 
 
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Registration</button>
+                                <button className="btn btn-primary" data-aos="fade-up" data-aos-duration="3000">Registration</button>
                             </div>
                         </form>
                     </div>

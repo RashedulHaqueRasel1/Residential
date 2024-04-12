@@ -40,10 +40,11 @@ const PropertyDetails = () => {
 
             <img src={image} alt="" className="object-cover mt-8 w-full h-80 rounded sm:h-[700px] lg:col-span-7 dark:bg-gray-500" />
             <div className="p-6 space-y-2 lg:col-span-5">
-                <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">Noster tincidunt reprimique ad pro</h3>
+                <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">{estate_title}</h3>
                 <p className="text-[18px]">{description}</p>
 
                 <div className=" ">
+                    <h1>Property Details</h1>
                     <div className="flex space-x-2">
 
                         <IoIosPricetag />

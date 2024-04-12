@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from "../Firebase/Firebase.config";
 
@@ -6,19 +6,22 @@ import app from "../Firebase/Firebase.config";
 
 export const AuthContext = createContext(null);
 
+
 const auth = getAuth(app);
 
+const googleProvider = new GoogleAuthProvider();
 
 
 const AuthProvider = ({ children }) => {
 
 
     const [user, setUser] = useState();
+    const [loading, setLoading] = useState(true);
 
 
     // create User
     const createUser = (email, password) => {
-        // setLoading(true)
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
 
     }
@@ -27,15 +30,35 @@ const AuthProvider = ({ children }) => {
 
     // UserLog in
     const userLogIn = (email, password) => {
-        // setLoading(true)
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
 
+
+
+    // google Login
+    const singWithGoogle = () => {
+        setLoading(true)
+        return signInWithPopup(auth, googleProvider)
+    }
+
+
+
+
+
     // log Out
     const userLogOut = () => {
-        // setLoading(true)
+        setLoading(true)
         return signOut(auth)
+    }
+
+
+    // Update Profile
+    const userUpdateProfile = () => {
+        updateProfile(auth.currentUser, {
+            displayName: "Jane Q. User", photoURL: "https://example.com/jane-q-user/profile.jpg"
+          })
     }
 
 
@@ -44,7 +67,7 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser)
-            // setLoading(false)
+            setLoading(false)
             // console.log('use in the'), createUser
         });
         return () => {
@@ -53,13 +76,16 @@ const AuthProvider = ({ children }) => {
     }, [])
 
 
-    console.log(user)
+    // console.log(user)
 
     const authInfo = {
         user,
+        loading,
         createUser,
         userLogIn,
-        userLogOut
+        userLogOut,
+        singWithGoogle,
+        userUpdateProfile
     }
 
     return (

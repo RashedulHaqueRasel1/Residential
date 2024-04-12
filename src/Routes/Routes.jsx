@@ -9,6 +9,8 @@ import Registration from "../components/Registration/Registration";
 import Login from "../components/Login/Login";
 import Home from "../components/Home/Home";
 import PropertyDetails from "../components/PropertyDetails/PropertyDetails";
+import PrivetRoute from "./PrivetRoute/PrivetRoute";
+import Error from "../components/Error/Error";
  
 
 
@@ -16,6 +18,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement:<Error></Error>,
         children: [
             {
                 path: '/',
@@ -24,11 +27,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/updateProfile',
-                element: <UpdateProfile></UpdateProfile>
+                element: <PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
             },
             {
                 path: '/profile',
-                element: <Profile></Profile>
+                element: <PrivetRoute><Profile></Profile></PrivetRoute>
             },
             {
                 path: '/registration',
@@ -40,7 +43,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/propertyDetails/:id',
-                element:<PropertyDetails></PropertyDetails>,
+                element: <PrivetRoute><PropertyDetails></PropertyDetails></PrivetRoute>,
                 loader: () => fetch('/property.json')
             }
         ]
